@@ -1,0 +1,14 @@
+<div>
+  Course List
+  <br>
+  <div *ngFor="let course of courses">
+    <p> {{course.name}} </p>
+    <p> {{course.description}} </p>
+    <p> {{course.price}} </p>
+    <button (click)="deleteCourse(course._id)" class="btn btn-danger">Delete</button>
+    <button (click)="updateCourse(course._id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+    <button (click)="courseDetails(course._id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+    <hr>
+  </div>
+
+</div>
