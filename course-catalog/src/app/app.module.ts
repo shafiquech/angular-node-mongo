@@ -8,13 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CourseCreateComponent } from './components/course-create/course-create.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseCreateComponent,
     CourseListComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    NavBarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

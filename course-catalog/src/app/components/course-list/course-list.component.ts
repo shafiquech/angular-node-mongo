@@ -44,5 +44,12 @@ export class CourseListComponent implements OnInit {
   updateCourse(id: string) {
     this.router.navigate(['courses/add', id]);
   }
+  createNewcourse() {
+    this.router.navigate(['courses/add', 'NA']);
+  }
+
+  getRandomImageId() {
+    return Math.floor((Math.random() * 3) + 1);
+  }
 
 }

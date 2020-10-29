@@ -1,4 +1,5 @@
-<div class="container">
+<section id="courses" class="courses">
+  <div class="container" data-aos="fade-up">
   <form [formGroup]="productForm" (ngSubmit)="submitProduct()" novalidate>
     <div *ngIf="validMessage != ''">
       <h3 class="has-info">{{validMessage}}</h3>
@@ -22,3 +23,4 @@
   </form>
 
 </div>
+</section>

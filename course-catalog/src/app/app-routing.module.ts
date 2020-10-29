@@ -5,11 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { CourseListComponent } from './components/course-list/course-list.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { CourseCreateComponent } from './components/course-create/course-create.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: CourseListComponent
+        component: HomeComponent
     },
     {
         path: 'courses/add/:id',

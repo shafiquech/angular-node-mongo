@@ -1,14 +1,38 @@
-<div>
-  Course List
-  <br>
-  <div *ngFor="let course of courses">
-    <p> {{course.name}} </p>
-    <p> {{course.description}} </p>
-    <p> {{course.price}} </p>
-    <button (click)="deleteCourse(course._id)" class="btn btn-danger">Delete</button>
-    <button (click)="updateCourse(course._id)" class="btn btn-info" style="margin-left: 10px">Update</button>
-    <button (click)="courseDetails(course._id)" class="btn btn-info" style="margin-left: 10px">Details</button>
-    <hr>
-  </div>
 
-</div>
+
+
+<!-- ======= Courses Section ======= -->
+<section id="courses" class="courses">
+  <div class="container" data-aos="fade-up">
+
+    <div  class="row" data-aos="zoom-in" data-aos-delay="100">
+
+      <div *ngFor="let course of courses;" class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="course-item">
+          <img src="assets/img/course-{{getRandomImageId()}}.jpg" class="img-fluid" alt="...">
+          <div class="course-content">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4>{{course.name}}</h4>
+              <p class="price">${{course.price}}</p>
+              <span>
+                <a routerLink="/courses/add/{{course._id}}"> <i class="fa fa-edit"></i> </a> &nbsp;
+                <a href="javascript:void(0);" (click)="deleteCourse(course._id)"> <i class="fa fa-trash"></i> </a>
+            </span> 
+            </div>
+
+            <h3><a routerLink="/courses/{{course._id}}">{{course.name}}</a></h3>
+      
+            <p>{{course.description}}</p>
+          </div>
+        </div>
+        
+      </div> <!-- End Course Items-->
+   
+
+    </div>
+    <div>
+      <button (click)="createNewcourse()" class="btn btn-primary">Add a Course</button>
+    </div>
+  </div>
+</section><!-- End Courses Section -->
+
